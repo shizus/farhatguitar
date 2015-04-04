@@ -37,6 +37,10 @@ function searchInChildren($, jqueryObjects, valThis) {
 				var foundInChildren = false;
 				if (hasChildren) {
 					var foundInChildren = searchInChildren($, next.find("li>label"), valThis);
+					if (foundInChildren) {
+						found = true;
+						$(this).parent().show();					
+					}
 				}
 				if (!hasChildren || !foundInChildren) {
 					//I search in current jqueryObject
@@ -49,5 +53,6 @@ function searchInChildren($, jqueryObjects, valThis) {
 					}
 				}
 			     });
+
 		return found;
 	}
