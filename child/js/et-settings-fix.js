@@ -42,13 +42,13 @@ function searchInChildren($, jqueryObjects, valThis) {
 						$(this).parent().show();					
 					}
 				}
-				if (!hasChildren || !foundInChildren) {
-					//I search in current jqueryObject
-					var text = $(this).html().toLowerCase();
-					if (text.indexOf(valThis) >= 0) {
-						found = true;
-						$(this).parent().show();
-					}else {
+				//I search in current jqueryObject
+				var text = $(this).html().toLowerCase();
+				if (text.indexOf(valThis) >= 0) {
+					found = true;
+					$(this).parent().show();
+				}else {
+					if (!foundInChildren) {
 						$(this).parent().hide();
 					}
 				}
