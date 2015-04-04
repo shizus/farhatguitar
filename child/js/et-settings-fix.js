@@ -23,11 +23,31 @@ jQuery(document).ready(function($) {
 		taxonomyCategory.prepend('<input placeholder="Search Me" id="box" type="text" />');
 		$('#box').keyup(function(){
 			   var valThis = $(this).val().toLowerCase();
-			    $('ul.categorychecklist>li>label').each(function(){
-			     var text = $(this).html().toLowerCase();
-				(text.indexOf(valThis) >= 0) ? $(this).parent().show() : $(this).parent().hide();            
-			   });
+			    searchInChildren($, $('ul.categorychecklist>li>label'), valThis);
 			});
 	}
 	
-})
+});
+
+function searchInChildren($, jqueryObjects, valThis) {
+		var found = false;
+		jqueryObjects.each(function(){
+				var next = $(this).next();
+				var hasChildren = next.is("ul");
+				var foundInChildren = false;
+				if (hasChildren) {
+					var foundInChildren = searchInChildren($, next.find("li>label"), valThis);
+				}
+				if (!hasChildren || !foundInChildren) {
+					//I search in current jqueryObject
+					var text = $(this).html().toLowerCase();
+					if (text.indexOf(valThis) >= 0) {
+						found = true;
+						$(this).parent().show();
+					}else {
+						$(this).parent().hide();
+					}
+				}
+			     });
+		return found;
+	}
