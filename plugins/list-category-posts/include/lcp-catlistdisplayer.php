@@ -193,6 +193,7 @@ class CatListDisplayer {
       $query = preg_replace($pattern, '', $query);
 
       $url = strtok($request_uri,'?');
+      $url = rtrim($url, '/');
       $protocol = "http";
       $port = $_SERVER['SERVER_PORT'];
       if ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $port == 443){
