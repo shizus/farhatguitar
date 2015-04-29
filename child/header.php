@@ -126,6 +126,13 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" />
 				</a>
+<div id="contact-information">
+<?php $post_banner = get_post(2107); 
+						$content = $post_banner->post_content;
+						echo apply_filters( 'the_content',  $content );
+
+					?>
+</div>
 
 				<div id="et-top-navigation">
 					<nav id="top-menu-nav">

@@ -9,6 +9,198 @@ Template:       Divi
 
 /*@import url("../Divi/style.css");*/
 
+
+/* Fix anti-responsive */
+
+.single-post #primary {
+margin: 0;
+}
+.single-post #content {
+margin: 0 3%;
+width: 94%;
+}
+.single .site-content {
+	margin: 0;
+}
+
+.video-section {
+   max-height: 390px;
+}
+
+.video-section .et_pb_column.et_pb_column_1_4 {
+   overflow-y: scroll;
+   overflow-x: hide;
+   max-height: 390px;
+}
+
+/* Arreglos para fijar el ancho */
+
+body {
+    margin: auto;
+    max-width: 320px;
+    font-family: open sans;
+    max-width: 960px;
+}     
+
+#main-header, body.admin-bar.et_fixed_nav #top-header {
+    margin: auto;
+    max-width: 960px;
+}
+
+#contact-information {
+    color: #ff8f5f;
+    float: right;
+    font-weight: bold;
+}
+.container,
+.et_pb_row  {
+    max-width: 960px;
+}
+
+.et_pb_column_1_3 {
+    width: 300px;
+}
+.et_pb_column_3_4 {
+    width: 705px;
+}
+.et_pb_column {
+    float: left;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 959) { 
+     body {
+       max-width: 320px;
+     }
+}
+
+.header-banner .addtoany_share_save_container,
+.footer-widget .addtoany_share_save_container {
+    display: none;
+}
+
+
+.single-bands .container > #content-area > div > article > h1 {
+    display: none;
+}
+
+
+.et_pb_section {
+	padding: 0px;
+}
+
+/* related songs styles */
+
+.related-bands .et_pb_image_container img,
+.related-songs .et_pb_image_container img {
+    float: left;
+    height: 120px;
+    margin-right: 10px;
+    width: 120px;
+}
+
+
+
+.related-bands p,
+.related-songs p {
+    display: none;
+}
+
+.related-bands article {
+    float: left;
+    margin: 0 1.5% !important;
+    width: 30%;
+}
+.related-bands img {
+    float: left;
+    width: 50%;
+}
+.related-bands h2 {
+    float: left;
+    margin: 2.5%;
+    width: 45%;
+}
+
+
+/* details-list  */
+
+
+.details-list .details-first-column {
+    float: left;
+    width: 20%;
+}
+.details-list .details-second-column {
+    float: right;
+    width: 70%;
+}
+.details-list hr {
+    clear: both;
+}
+
+#left-area ul {
+    padding: 0;
+}
+
+.songs-and-details-section .et_pb_column_1_4 {
+    margin: 0 5px;
+    width: 203px;
+}
+.songs-and-details-section .et_pb_column_1_4:nth-child(4),
+.songs-and-details-section .et_pb_column.et_pb_column_3_4 + .et_pb_column_1_4 {
+    width: 310px !important;
+    float: right;
+    clear: right;
+}
+.details-list ul {
+    list-style-type: none !important;
+}
+/* Fix side bar settings hiden */
+
+
+.et_pb_page_settings.et_pb_page_layout_settings {
+    display: block !important;
+}
+
+.band-main-image {
+    height: auto;
+    width: 100%;
+}
+
+
+.band-name-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    float: left;
+    font-size: 1.5em;
+    margin-top: -36px;
+    position: relative;
+    z-index: 11;
+}
+
+img.band-main-image {
+    position: relative;
+    z-index: 10;
+}
+
+.item-song-title {
+    float: left;
+    width: 45%;
+}
+.item-song-header > img {
+    float: left;
+    height: auto;
+    margin-right: 5px;
+    width: 50%;
+}
+
+.et_pb_column_2_3 {
+	width: 630px;
+}
+
+
+.songs-and-details-section .et_pb_column_3_4 {
+    width: 609px;
+}
 /* Band Template */
 .band-main-image {
     height: auto;
@@ -42,26 +234,223 @@ Template:       Divi
     list-style: outside none none;
 }
 
+/* lesson template */
 
-.related-bands > ul > li {
+.style-section, .style-section > div {
+    margin: 0;
+    padding: 0;
+}
+.video-section, .video-section > div {
+    margin: 0;
+    padding: 0;
+}
+
+.video-section > div > div.et_pb_column.et_pb_column_1_4 {
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    padding: 10px 0;
+}
+
+.video-section div.part-songs-list > ul {
+    display: block;
+    max-height: 210px;
+    overflow-y: auto;
+}
+
+/* related songs */
+
+
+.related-songs ul > li {
+    float: left;
+    margin: 1.5%;
+    width: 30%;
+    list-style: outside none none;
+}
+
+.related-songs ul > li > a {
+    float: right;
+    width: 50%;
+}
+.related-songs ul > li > a > img {
+    float: left;
+    height: auto;
+    width: 90%;
+}
+
+/* related bands */
+
+
+.related-bands ul > li {
     float: left;
     list-style: outside none none;
     margin: 1.5%;
     width: 30%;
 }
-.related-bands > ul > li a:first-child {
+.related-bands ul > li a:first-child {
     float: right;
-    width: 40%;
+    width: 46%;
+    margin: 2%;
 }
 selectorSavingError {
     float: left;
 }
-.related-bands img {
+.related-bands img{
     height: auto;
+    width: 40%;
+}
+
+.bands-list > ul > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 40%;
+}
+
+.bands-list > ul > li a:first-child {
+    float: right;
     width: 50%;
+}
+
+
+.bands-list img {
+    height: auto;
+    width: 40%;
 }
 
 #main-content .container::before {
 	background: none;
 }
 
+/* Header */
+
+#et-top-navigation {
+    background-color: #ef8d37;
+	clear: both;
+}
+
+header#main-header img#logo {
+	float: left;
+	width: 216px;
+	height: auto;
+	max-height: auto;
+}
+
+.et_fixed_nav #logo {
+	max-height: 118px;
+}
+
+header#main-header.et-fixed-header img#logo {
+    height: 48px;
+    width: auto;
+}
+header#main-header {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
+}
+
+/* home */
+
+.et_pb_slide_image > img {
+    display: none;
+}
+
+.et_pb_slide.et_pb_slide_with_image.et_pb_bg_layout_dark.et_pb_media_alignment_center.et_slide_transition {
+	background-size: 100%;
+}
+
+.et_pb_slide_with_image .et_pb_slide_description {
+    float: left;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    text-align: left;
+    width: 100%;
+	padding-top: 0px;
+	position: absolute;
+	bottom: 0px;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+
+.et_pb_slide.et_pb_slide_with_image.et_pb_bg_layout_dark.et_pb_media_alignment_center {
+    min-height: 486px;
+}
+.et_pb_slide_content {
+    float: left;
+    margin: 0 10px;
+    padding: 6px 5px;
+    width: auto;
+}
+.et_pb_more_button {
+    border: 0 solid !important;
+}
+
+
+.alphabetical-list .et-pb-icon.et-waypoint.et_pb_animation_off.et-animated {
+    font-size: 32px;
+    height: 32px;
+    margin: -8px 20px 0 0;
+    width: 32px;
+}
+.alphabetical-list > li {
+    font-size: 22px;
+    list-style: outside none none;
+}
+
+
+.alphabetical-list .list-container li {
+    font-size: 80%;
+    list-style: outside none none;
+	/*content: "";
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;*/
+}
+
+
+
+/* Banner */
+.page .header-banner{
+    margin: 10px auto;
+
+}
+/* Section Titles */
+
+.latest-uploads,
+.section-title {
+	border-bottom: 2px solid #ef8d37;
+	color: #ef8d37;
+	background-color: #D7C9C9;
+	text-transform: uppercase;
+	padding-left: 5px;
+	font-size: 1em;
+    	font-weight: 600;
+}
+
+/* Pagination */
+
+ul.lcp_paginator > li {
+    border: medium none;
+    color: orange;
+    width: 5px;
+}
+
+.lcp_paginator a:hover {
+    font-size: 16pt;
+}
+
+ul.lcp_paginator > li > a {
+    color: orange;
+}
+
+ul.lcp_paginator {
+    clear: both;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}

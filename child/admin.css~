@@ -1,4 +1,0 @@
-.categorydiv div.tabs-panel {
-	max-height: 500px;
-background-color: red;
-}
