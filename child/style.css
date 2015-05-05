@@ -349,6 +349,16 @@ header#main-header {
 
 /* home */
 
+#contact-information > p {
+    font-family: open sans;
+    font-size: 14pt;
+}
+#top-menu a {
+    font-family: open sans;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
 .et_pb_slide_image > img {
     display: none;
 }
@@ -380,10 +390,43 @@ header#main-header {
     padding: 6px 5px;
     width: auto;
 }
+
+.et_pb_slide_content {
+    margin-top: 15px;
+}
+
+
+#page-container .et_pb_more_button {
+    font-family: open sans;
+    font-size: 24.88pt;
+    font-weight: bold;
+}
+
+.et_pb_slide_content > p {
+    font-family: open sans;
+    font-size: 16.59pt;
+    font-weight: lighter;
+}
+
 .et_pb_more_button {
     border: 0 solid !important;
 }
 
+#home-lists h4 {
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 5px;
+    width: 80%;
+}
+
+#home-lists .style-filter {
+    border-right: 1px solid #d3d3d3;
+    margin: 0;
+}
+
+#home-lists div.et_pb_blurb_position_left, #home-lists .style-filter {
+    margin: 0;
+    padding-bottom: 5px;
+}
 
 .alphabetical-list .et-pb-icon.et-waypoint.et_pb_animation_off.et-animated {
     font-size: 32px;
@@ -391,9 +434,19 @@ header#main-header {
     margin: -8px 20px 0 0;
     width: 32px;
 }
+
+ul.alphabetical-list {
+    border-right: 1px solid #d3d3d3;
+}
+
 .alphabetical-list > li {
     font-size: 22px;
     list-style: outside none none;
+}
+
+ul.alphabetical-list li div.list-container ul li {
+    border-bottom: 1px solid #d3d3d3;
+    width: 85%;
 }
 
 
@@ -453,4 +506,11 @@ ul.lcp_paginator {
     margin: auto;
     position: relative;
     text-align: center;
+}
+
+/* Tabas */
+
+
+.tab-container {
+    font-size: 11px;
 }
